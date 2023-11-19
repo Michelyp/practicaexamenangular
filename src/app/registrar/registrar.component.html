@@ -1,0 +1,27 @@
+<form #registrarForm = "ngForm">
+    <div class="col-md-8 mb-4">
+      <div class="form-outline">
+        <label class="form-label" for="form3Example1">Nombre</label>
+        <input type="text" name="cajanombre" #cajanombre class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-8 mb-4">
+      <div class="form-outline">
+        <label class="form-label" for="form3Example1">Apellidos</label>
+        <input type="text" name="cajaapellidos" #cajaapellidos class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-8 mb-4">
+      <div class="form-outline">
+        <label class="form-label" for="form3Example1">Imagen</label>
+        <input type="text" name="cajaimagen" #cajaimagen v-model="alumno.imagen" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-8 mb-4">
+      <div class="form-outline">
+        <label class="form-label" for="form3Example1">ID Curso</label>
+        <input type="text" name="cajaidcurso" #cajaidcurso class="form-control" />
+      </div>
+    </div>
+      <button type="submit" (click)="registrar()" class="btn btn-primary btn-block mb-4">Registrar</button>
+  </form>

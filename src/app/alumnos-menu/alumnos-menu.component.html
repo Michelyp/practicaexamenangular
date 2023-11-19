@@ -1,0 +1,29 @@
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Imagen</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alumno of alumnos">
+        <th>{{ alumno.nombre }}</th>
+        <td>{{ alumno.apellidos }}</td>
+        <td><img src="{{alumno.imagen}}" style="width: 150px" /></td>
+        <td>
+          <router-link class="btn btn-dark"  [routerLink]="['/detalle/', alumno.idAlumno]"
+            >Detalle</router-link
+          >
+          <!-- <router-link class="btn btn-dark"  [routerLink]="['/actualuzar/', alumno.idAlumno]"
+            >Actualizar</router-link
+          >
+          <router-link class="btn btn-dark"  [routerLink]="['/eliminar/', alumno.idAlumno]"
+            >Eliminar</router-link
+          > -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
